@@ -43,14 +43,8 @@
         }
 
         @keyframes fall {
-            0% {
-                transform: translateY(-10px) rotate(0deg);
-                opacity: 1;
-            }
-            100% {
-                transform: translateY(100vh) rotate(360deg);
-                opacity: 0.2;
-            }
+            0% { transform: translateY(-10px) rotate(0deg); opacity: 1; }
+            100% { transform: translateY(100vh) rotate(360deg); opacity: 0.2; }
         }
 
         /* Header */
@@ -114,9 +108,7 @@
             transition: all 0.3s ease;
         }
 
-        .menu-btn:hover {
-            transform: scale(1.1);
-        }
+        .menu-btn:hover { transform: scale(1.1); }
 
         /* Sidebar */
         .sidebar {
@@ -133,9 +125,7 @@
             border-right: 1px solid rgba(204, 0, 0, 0.2);
         }
 
-        .sidebar.active {
-            left: 0;
-        }
+        .sidebar.active { left: 0; }
 
         .sidebar-overlay {
             position: fixed;
@@ -150,10 +140,7 @@
             transition: all 0.3s ease;
         }
 
-        .sidebar-overlay.active {
-            opacity: 1;
-            visibility: visible;
-        }
+        .sidebar-overlay.active { opacity: 1; visibility: visible; }
 
         .sidebar-header {
             padding: 30px 25px;
@@ -161,23 +148,12 @@
             text-align: center;
         }
 
-        .sidebar-header h2 {
-            font-size: 1.5rem;
-            margin-bottom: 5px;
-        }
+        .sidebar-header h2 { font-size: 1.5rem; margin-bottom: 5px; }
+        .sidebar-header p { font-size: 0.85rem; opacity: 0.9; }
 
-        .sidebar-header p {
-            font-size: 0.85rem;
-            opacity: 0.9;
-        }
+        .sidebar-content { padding: 25px; }
 
-        .sidebar-content {
-            padding: 25px;
-        }
-
-        .dev-section {
-            margin-bottom: 30px;
-        }
+        .dev-section { margin-bottom: 30px; }
 
         .dev-section h3 {
             color: #ff4d4d;
@@ -188,6 +164,7 @@
             gap: 10px;
         }
 
+        /* Developer Cards in Sidebar - Clickable */
         .dev-card {
             background: rgba(255, 255, 255, 0.05);
             border: 1px solid rgba(204, 0, 0, 0.2);
@@ -195,11 +172,12 @@
             padding: 15px;
             margin-bottom: 10px;
             transition: all 0.3s ease;
+            cursor: pointer;
         }
 
         .dev-card:hover {
-            background: rgba(255, 255, 255, 0.08);
-            border-color: rgba(204, 0, 0, 0.4);
+            background: rgba(204, 0, 0, 0.15);
+            border-color: rgba(204, 0, 0, 0.5);
             transform: translateX(5px);
         }
 
@@ -215,27 +193,11 @@
             margin-top: 3px;
         }
 
-        .sidebar-link {
-            display: block;
-            padding: 12px 15px;
-            color: #ffcccc;
-            text-decoration: none;
-            border-radius: 8px;
-            margin-bottom: 8px;
-            transition: all 0.3s ease;
-            border: 1px solid transparent;
-        }
-
-        .sidebar-link:hover {
-            background: rgba(204, 0, 0, 0.15);
-            border-color: rgba(204, 0, 0, 0.3);
-            color: #fff;
-        }
-
-        .sidebar-link i {
-            margin-right: 10px;
-            width: 20px;
-            text-align: center;
+        .dev-card .view-hint {
+            font-size: 0.72rem;
+            color: #ff4d4d;
+            margin-top: 5px;
+            opacity: 0.8;
         }
 
         .close-sidebar {
@@ -256,9 +218,7 @@
             transition: all 0.3s ease;
         }
 
-        .close-sidebar:hover {
-            background: rgba(255, 255, 255, 0.2);
-        }
+        .close-sidebar:hover { background: rgba(255, 255, 255, 0.2); }
 
         /* Category Filter */
         .filter-section {
@@ -280,9 +240,7 @@
             flex-wrap: wrap;
         }
 
-        .filter-container::-webkit-scrollbar {
-            display: none;
-        }
+        .filter-container::-webkit-scrollbar { display: none; }
 
         .filter-btn {
             padding: 8px 20px;
@@ -305,7 +263,7 @@
             transform: translateY(-2px);
         }
 
-        /* ===== MASONRY 2-COLUMN GRID (LIKE SCREENSHOT) ===== */
+        /* Wallpaper Grid */
         .wallpaper-grid {
             display: grid;
             grid-template-columns: 1fr 1fr;
@@ -325,13 +283,7 @@
             break-inside: avoid;
         }
 
-        .wallpaper-card:nth-child(odd) {
-            margin-top: 0;
-        }
-
-        .wallpaper-card:nth-child(even) {
-            margin-top: 20px;
-        }
+        .wallpaper-card:nth-child(even) { margin-top: 20px; }
 
         .wallpaper-card:hover {
             transform: scale(1.02);
@@ -348,9 +300,7 @@
             transition: transform 0.5s ease;
         }
 
-        .wallpaper-card:hover img {
-            transform: scale(1.05);
-        }
+        .wallpaper-card:hover img { transform: scale(1.05); }
 
         .wallpaper-overlay {
             position: absolute;
@@ -407,7 +357,7 @@
             box-shadow: 0 4px 15px rgba(204, 0, 0, 0.5);
         }
 
-        /* Gallery Modal */
+        /* ===== GALLERY MODAL ===== */
         .gallery-modal {
             display: none;
             position: fixed;
@@ -415,7 +365,7 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background: rgba(0, 0, 0, 0.95);
+            background: rgba(0, 0, 0, 0.97);
             z-index: 2000;
             justify-content: center;
             align-items: center;
@@ -423,14 +373,12 @@
             padding: 20px;
         }
 
-        .gallery-modal.active {
-            display: flex;
-        }
+        .gallery-modal.active { display: flex; }
 
         .gallery-image-container {
             position: relative;
             max-width: 90%;
-            max-height: 75vh;
+            max-height: 70vh;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -438,7 +386,7 @@
 
         .gallery-image {
             max-width: 100%;
-            max-height: 75vh;
+            max-height: 70vh;
             object-fit: contain;
             border-radius: 16px;
             box-shadow: 0 20px 60px rgba(0, 0, 0, 0.8);
@@ -463,10 +411,7 @@
             justify-content: center;
         }
 
-        .gallery-close:hover {
-            background: #cc0000;
-            transform: scale(1.1);
-        }
+        .gallery-close:hover { background: #cc0000; transform: scale(1.1); }
 
         .gallery-nav {
             position: absolute;
@@ -487,18 +432,9 @@
             justify-content: center;
         }
 
-        .gallery-nav:hover {
-            background: #cc0000;
-            transform: translateY(-50%) scale(1.1);
-        }
-
-        .gallery-prev {
-            left: 15px;
-        }
-
-        .gallery-next {
-            right: 15px;
-        }
+        .gallery-nav:hover { background: #cc0000; transform: translateY(-50%) scale(1.1); }
+        .gallery-prev { left: 15px; }
+        .gallery-next { right: 15px; }
 
         .gallery-info {
             text-align: center;
@@ -506,15 +442,8 @@
             color: #ffcccc;
         }
 
-        .gallery-info h3 {
-            font-size: 1.3rem;
-            margin-bottom: 4px;
-        }
-
-        .gallery-info p {
-            color: #cc6666;
-            font-size: 0.85rem;
-        }
+        .gallery-info h3 { font-size: 1.3rem; margin-bottom: 4px; }
+        .gallery-info p { color: #cc6666; font-size: 0.85rem; }
 
         .gallery-actions {
             display: flex;
@@ -523,26 +452,71 @@
             justify-content: center;
         }
 
+        /* Direct Download Button - Green Progress Style */
         .gallery-download-btn {
             display: inline-flex;
             align-items: center;
             gap: 8px;
-            padding: 10px 24px;
+            padding: 12px 28px;
             background: linear-gradient(135deg, #cc0000, #990000);
             color: #fff;
             border: none;
             border-radius: 25px;
             font-family: 'Poppins', sans-serif;
             font-size: 0.95rem;
-            font-weight: 500;
+            font-weight: 600;
             cursor: pointer;
             transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
         }
 
         .gallery-download-btn:hover {
             transform: scale(1.05);
-            box-shadow: 0 5px 20px rgba(204, 0, 0, 0.5);
+            box-shadow: 0 5px 20px rgba(204, 0, 0, 0.6);
         }
+
+        .gallery-download-btn.downloading {
+            background: linear-gradient(135deg, #006600, #004400);
+            cursor: not-allowed;
+        }
+
+        .gallery-download-btn .btn-progress {
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            background: rgba(255,255,255,0.15);
+            width: 0%;
+            transition: width 2s ease;
+            border-radius: 25px;
+        }
+
+        /* View Button - New Tab */
+        .gallery-view-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 12px 28px;
+            background: linear-gradient(135deg, #1a1a2e, #16213e);
+            color: #fff;
+            border: 1px solid rgba(204, 0, 0, 0.4);
+            border-radius: 25px;
+            font-family: 'Poppins', sans-serif;
+            font-size: 0.95rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+        }
+
+        .gallery-view-btn:hover {
+            background: linear-gradient(135deg, #cc0000, #990000);
+            border-color: transparent;
+            transform: scale(1.05);
+            box-shadow: 0 5px 20px rgba(204, 0, 0, 0.6);
+        }
+
 
         .gallery-counter {
             position: absolute;
@@ -555,124 +529,148 @@
             font-size: 0.85rem;
         }
 
-        /* Info Modal */
-        .info-modal {
+        /* ===== DEVELOPER POPUP MODAL ===== */
+        .dev-modal {
             display: none;
             position: fixed;
             top: 0;
             left: 0;
             width: 100%;
             height: 100%;
-            background: rgba(0, 0, 0, 0.85);
+            background: rgba(0, 0, 0, 0.9);
             z-index: 3000;
             justify-content: center;
             align-items: center;
             padding: 20px;
         }
 
-        .info-modal.active {
-            display: flex;
-        }
+        .dev-modal.active { display: flex; }
 
-        .info-content {
-            background: linear-gradient(180deg, #1a0000 0%, #0d0000 100%);
-            border: 1px solid rgba(204, 0, 0, 0.3);
-            border-radius: 20px;
-            max-width: 600px;
+        .dev-modal-content {
+            background: linear-gradient(160deg, #1a0000 0%, #0d0000 60%, #110000 100%);
+            border: 1px solid rgba(204, 0, 0, 0.4);
+            border-radius: 24px;
+            max-width: 420px;
             width: 100%;
-            max-height: 80vh;
-            overflow-y: auto;
-            padding: 0;
-            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.9);
+            overflow: hidden;
+            box-shadow: 0 25px 70px rgba(0, 0, 0, 0.9), 0 0 40px rgba(204,0,0,0.1);
+            animation: popIn 0.35s cubic-bezier(0.34, 1.56, 0.64, 1);
         }
 
-        .info-header {
-            background: linear-gradient(135deg, #cc0000, #990000);
-            padding: 25px 30px;
-            border-radius: 20px 20px 0 0;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
+        @keyframes popIn {
+            from { transform: scale(0.85); opacity: 0; }
+            to { transform: scale(1); opacity: 1; }
         }
 
-        .info-header h2 {
-            font-size: 1.3rem;
-            display: flex;
-            align-items: center;
-            gap: 10px;
+        .dev-modal-header {
+            background: linear-gradient(135deg, #cc0000, #880000);
+            padding: 28px 30px 22px;
+            position: relative;
+            text-align: center;
         }
 
-        .info-close {
-            background: rgba(255, 255, 255, 0.2);
-            border: none;
-            color: #fff;
-            width: 35px;
-            height: 35px;
+        .dev-modal-avatar {
+            width: 80px;
+            height: 80px;
             border-radius: 50%;
-            font-size: 1.2rem;
-            cursor: pointer;
-            transition: all 0.3s ease;
+            background: rgba(255,255,255,0.15);
+            border: 3px solid rgba(255,255,255,0.3);
             display: flex;
             align-items: center;
             justify-content: center;
+            font-size: 2rem;
+            margin: 0 auto 14px;
         }
 
-        .info-close:hover {
-            background: rgba(255, 255, 255, 0.4);
-            transform: scale(1.1);
+        .dev-modal-name {
+            font-size: 1.4rem;
+            font-weight: 700;
+            color: #fff;
+            margin-bottom: 4px;
         }
 
-        .info-body {
-            padding: 25px;
+        .dev-modal-role {
+            font-size: 0.85rem;
+            color: rgba(255,255,255,0.8);
+            background: rgba(255,255,255,0.15);
+            display: inline-block;
+            padding: 3px 14px;
+            border-radius: 20px;
         }
 
-        .info-body h3 {
-            color: #ff4d4d;
+        .dev-modal-close {
+            position: absolute;
+            top: 14px;
+            right: 16px;
+            background: rgba(255,255,255,0.15);
+            border: none;
+            color: #fff;
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
             font-size: 1rem;
-            margin: 18px 0 8px;
+            cursor: pointer;
             display: flex;
             align-items: center;
-            gap: 8px;
+            justify-content: center;
+            transition: all 0.3s ease;
         }
 
-        .info-body h3:first-child {
-            margin-top: 0;
+        .dev-modal-close:hover { background: rgba(255,255,255,0.3); transform: scale(1.1); }
+
+        .dev-modal-body {
+            padding: 25px 28px;
         }
 
-        .info-body p {
-            color: #cc9999;
-            font-size: 0.88rem;
-            line-height: 1.7;
-            margin-bottom: 8px;
+        .dev-info-row {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            padding: 13px 0;
+            border-bottom: 1px solid rgba(204,0,0,0.12);
         }
 
-        .info-body ul {
-            list-style: none;
-            padding: 0;
-            margin: 8px 0;
-        }
+        .dev-info-row:last-child { border-bottom: none; }
 
-        .info-body ul li {
-            color: #cc9999;
-            font-size: 0.88rem;
-            line-height: 1.9;
-            padding-left: 22px;
-            position: relative;
-        }
-
-        .info-body ul li::before {
-            content: "\f054";
-            font-family: "Font Awesome 6 Free";
-            font-weight: 900;
-            position: absolute;
-            left: 0;
+        .dev-info-icon {
+            width: 38px;
+            height: 38px;
+            border-radius: 10px;
+            background: rgba(204,0,0,0.15);
+            display: flex;
+            align-items: center;
+            justify-content: center;
             color: #ff4d4d;
-            font-size: 0.65rem;
+            font-size: 0.9rem;
+            flex-shrink: 0;
         }
 
-        .info-body .highlight {
+        .dev-info-label {
+            font-size: 0.73rem;
+            color: #cc6666;
+            margin-bottom: 2px;
+        }
+
+        .dev-info-value {
+            font-size: 0.9rem;
             color: #ffcccc;
             font-weight: 500;
+        }
+
+        .dev-skills {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 6px;
+            margin-top: 16px;
+        }
+
+        .dev-skill-tag {
+            padding: 4px 12px;
+            background: rgba(204,0,0,0.15);
+            border: 1px solid rgba(204,0,0,0.3);
+            border-radius: 12px;
+            font-size: 0.75rem;
+            color: #ff9999;
         }
 
         /* Footer */
@@ -684,10 +682,7 @@
             text-align: center;
         }
 
-        .footer-content {
-            max-width: 600px;
-            margin: 0 auto;
-        }
+        .footer-content { max-width: 600px; margin: 0 auto; }
 
         .footer-logo {
             font-size: 1.8rem;
@@ -722,9 +717,7 @@
             cursor: pointer;
         }
 
-        .footer-links a:hover {
-            color: #fff;
-        }
+        .footer-links a:hover { color: #fff; }
 
         .social-links {
             display: flex;
@@ -755,12 +748,9 @@
             transform: translateY(-3px);
         }
 
-        .copyright {
-            color: #663333;
-            font-size: 0.75rem;
-        }
+        .copyright { color: #663333; font-size: 0.75rem; }
 
-        /* Toast Notification */
+        /* Toast */
         .toast {
             position: fixed;
             bottom: 25px;
@@ -771,13 +761,14 @@
             padding: 12px 24px;
             border-radius: 25px;
             font-size: 0.9rem;
-            z-index: 3000;
+            z-index: 4000;
             opacity: 0;
             transition: all 0.4s ease;
             box-shadow: 0 8px 25px rgba(204, 0, 0, 0.4);
             display: flex;
             align-items: center;
             gap: 8px;
+            white-space: nowrap;
         }
 
         .toast.show {
@@ -787,53 +778,23 @@
 
         /* Responsive */
         @media (max-width: 768px) {
-            .logo {
-                font-size: 2.2rem;
-            }
-            .wallpaper-grid {
-                gap: 10px;
-                padding: 0 12px 15px;
-            }
-            .wallpaper-card:nth-child(even) {
-                margin-top: 15px;
-            }
-            .sidebar {
-                width: 300px;
-                left: -300px;
-            }
+            .logo { font-size: 2.2rem; }
+            .wallpaper-grid { gap: 10px; padding: 0 12px 15px; }
+            .wallpaper-card:nth-child(even) { margin-top: 15px; }
+            .sidebar { width: 300px; left: -300px; }
         }
 
         @media (max-width: 480px) {
-            .wallpaper-grid {
-                gap: 8px;
-                padding: 0 10px 12px;
-            }
-            .wallpaper-card:nth-child(even) {
-                margin-top: 12px;
-            }
-            .wallpaper-card {
-                border-radius: 16px;
-            }
-            .logo {
-                font-size: 1.8rem;
-            }
-            .sidebar {
-                width: 280px;
-                left: -280px;
-            }
+            .wallpaper-grid { gap: 8px; padding: 0 10px 12px; }
+            .wallpaper-card:nth-child(even) { margin-top: 12px; }
+            .wallpaper-card { border-radius: 16px; }
+            .logo { font-size: 1.8rem; }
+            .sidebar { width: 280px; left: -280px; }
         }
 
-        /* Scrollbar */
-        ::-webkit-scrollbar {
-            width: 6px;
-        }
-        ::-webkit-scrollbar-track {
-            background: #050505;
-        }
-        ::-webkit-scrollbar-thumb {
-            background: linear-gradient(180deg, #cc0000, #990000);
-            border-radius: 3px;
-        }
+        ::-webkit-scrollbar { width: 6px; }
+        ::-webkit-scrollbar-track { background: #050505; }
+        ::-webkit-scrollbar-thumb { background: linear-gradient(180deg, #cc0000, #990000); border-radius: 3px; }
     </style>
 <base target="_blank">
 </head>
@@ -844,7 +805,7 @@
     <!-- Sidebar Overlay -->
     <div class="sidebar-overlay" id="sidebarOverlay"></div>
 
-    <!-- Sidebar -->
+    <!-- Sidebar - Only Developers section now -->
     <aside class="sidebar" id="sidebar">
         <div class="sidebar-header">
             <button class="close-sidebar" id="closeSidebar"><i class="fas fa-times"></i></button>
@@ -854,32 +815,16 @@
         <div class="sidebar-content">
             <div class="dev-section">
                 <h3><i class="fas fa-code"></i> Developers</h3>
-                <div class="dev-card">
+                <div class="dev-card" onclick="showDevProfile('gavesh')">
                     <div class="name"><i class="fas fa-user"></i> Gavesh Vimanshana</div>
-                    <div class="role">Lead Developer & Designer</div>
+                    <div class="role">Lead Developer &amp; Designer</div>
+                    <div class="view-hint"><i class="fas fa-eye"></i> Click to view profile</div>
                 </div>
-                <div class="dev-card">
+                <div class="dev-card" onclick="showDevProfile('kaveesha')">
                     <div class="name"><i class="fas fa-user"></i> P Kaveesha</div>
-                    <div class="role">Co-Developer & UI/UX</div>
+                    <div class="role">Co-Developer &amp; UI/UX</div>
+                    <div class="view-hint"><i class="fas fa-eye"></i> Click to view profile</div>
                 </div>
-            </div>
-
-            <div class="dev-section">
-                <h3><i class="fas fa-folder-open"></i> Categories</h3>
-                <a href="#" class="sidebar-link" onclick="filterWallpapers('all'); closeSidebar(); return false;"><i class="fas fa-th-large"></i> All Wallpapers</a>
-                <a href="#" class="sidebar-link" onclick="filterWallpapers('nature'); closeSidebar(); return false;"><i class="fas fa-leaf"></i> Nature</a>
-                <a href="#" class="sidebar-link" onclick="filterWallpapers('anime'); closeSidebar(); return false;"><i class="fas fa-dragon"></i> Anime</a>
-                <a href="#" class="sidebar-link" onclick="filterWallpapers('cars'); closeSidebar(); return false;"><i class="fas fa-car"></i> Cars</a>
-                <a href="#" class="sidebar-link" onclick="filterWallpapers('abstract'); closeSidebar(); return false;"><i class="fas fa-shapes"></i> Abstract</a>
-                <a href="#" class="sidebar-link" onclick="filterWallpapers('dark'); closeSidebar(); return false;"><i class="fas fa-moon"></i> Dark</a>
-                <a href="#" class="sidebar-link" onclick="filterWallpapers('minimal'); closeSidebar(); return false;"><i class="fas fa-minus"></i> Minimal</a>
-            </div>
-
-            <div class="dev-section">
-                <h3><i class="fas fa-info-circle"></i> Legal</h3>
-                <a href="#" class="sidebar-link" onclick="showTerms(); closeSidebar(); return false;"><i class="fas fa-file-contract"></i> Terms of Service</a>
-                <a href="#" class="sidebar-link" onclick="showPrivacy(); closeSidebar(); return false;"><i class="fas fa-shield-alt"></i> Privacy Policy</a>
-                <a href="#" class="sidebar-link" onclick="showAbout(); closeSidebar(); return false;"><i class="fas fa-info-circle"></i> About Us</a>
             </div>
         </div>
     </aside>
@@ -909,10 +854,8 @@
         </div>
     </section>
 
-    <!-- Wallpaper Grid - 2 Column Masonry Style -->
-    <main class="wallpaper-grid" id="wallpaperGrid">
-        <!-- Wallpapers loaded by JS -->
-    </main>
+    <!-- Wallpaper Grid -->
+    <main class="wallpaper-grid" id="wallpaperGrid"></main>
 
     <!-- Gallery Modal -->
     <div class="gallery-modal" id="galleryModal">
@@ -928,20 +871,28 @@
             <p id="galleryCategory">Category</p>
             <div class="gallery-actions">
                 <button class="gallery-download-btn" id="galleryDownloadBtn">
-                    <i class="fas fa-download"></i> Download Wallpaper
+                    <div class="btn-progress" id="btnProgress"></div>
+                    <i class="fas fa-download" id="dlIcon"></i>
+                    <span id="dlBtnText">Download Wallpaper</span>
                 </button>
+                <a class="gallery-view-btn" id="galleryViewBtn" href="#" target="_blank">
+                    <i class="fas fa-external-link-alt"></i>
+                    <span>View Full Size</span>
+                </a>
             </div>
         </div>
     </div>
 
-    <!-- Info Modal -->
-    <div class="info-modal" id="infoModal">
-        <div class="info-content">
-            <div class="info-header">
-                <h2 id="infoTitle"><i class="fas fa-file-contract"></i> Terms of Service</h2>
-                <button class="info-close" id="infoClose"><i class="fas fa-times"></i></button>
+    <!-- Developer Profile Modal -->
+    <div class="dev-modal" id="devModal">
+        <div class="dev-modal-content">
+            <div class="dev-modal-header">
+                <button class="dev-modal-close" id="devModalClose"><i class="fas fa-times"></i></button>
+                <div class="dev-modal-avatar" id="devAvatar"><i class="fas fa-user"></i></div>
+                <div class="dev-modal-name" id="devName">Developer Name</div>
+                <div class="dev-modal-role" id="devRole">Role</div>
             </div>
-            <div class="info-body" id="infoBody"></div>
+            <div class="dev-modal-body" id="devModalBody"></div>
         </div>
     </div>
 
@@ -961,10 +912,8 @@
                 for your desktop and mobile devices.
             </p>
             <div class="footer-links">
-                <a onclick="showTerms(); return false;">Terms of Service</a>
-                <a onclick="showPrivacy(); return false;">Privacy Policy</a>
-                <a onclick="showAbout(); return false;">About Us</a>
-                <a onclick="showContact(); return false;">Contact</a>
+                <a onclick="showDevProfile('gavesh')">Gavesh Vimanshana</a>
+                <a onclick="showDevProfile('kaveesha')">P Kaveesha</a>
             </div>
             <div class="social-links">
                 <a href="#"><i class="fab fa-facebook-f"></i></a>
@@ -974,57 +923,61 @@
             </div>
             <p class="copyright">
                 &copy; 2026 Wallpaper Story. All rights reserved.<br>
-                Developed by Gavesh Vimanshana & P Kaveesha
+                Developed by Gavesh Vimanshana &amp; P Kaveesha
             </p>
         </div>
     </footer>
 
     <script>
-        // Wallpaper Data with various aspect ratios for masonry effect
+        // Wallpaper Data
         const wallpapers = [
-         //dark 
-    { "id": 1, "title": "Night City", "category": "anime", "url": "https://images.unsplash.com/photo-1519608487953-e999c86e7455?w=1920&q=90", "thumb": "https://images.unsplash.com/photo-1519608487953-e999c86e7455?w=600&q=80", "height": "tall" },
-    { "id": 2, "title": "Dark Forest", "category": "dark", "url": "https://images.unsplash.com/photo-1511497584788-876760111969?w=1920&q=90", "thumb": "https://images.unsplash.com/photo-1511497584788-876760111969?w=600&q=80", "height": "tall" },
-    { "id": 3, "title": "Black Waves", "category": "dark", "url": "https://images.unsplash.com/photo-1550684376-efcbd6e3f031?w=1920&q=90", "thumb": "https://images.unsplash.com/photo-1550684376-efcbd6e3f031?w=600&q=80", "height": "medium" },
-    { "id": 4, "title": "Neon Night", "category": "dark", "url": "https://images.unsplash.com/photo-1515630278258-407f66498911?w=1920&q=90", "thumb": "https://images.unsplash.com/photo-1515630278258-407f66498911?w=600&q=80", "height": "tall" },
-    { "id": 5, "title": "Dark Mountains", "category": "dark", "url": "https://images.unsplash.com/photo-1439853949127-fa647821eba0?w=1920&q=90", "thumb": "https://images.unsplash.com/photo-1439853949127-fa647821eba0?w=600&q=80", "height": "short" },
-    { "id": 6, "title": "Night Sky", "category": "dark", "url": "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1920&q=90", "thumb": "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=600&q=80", "height": "medium" },
-    { "id": 7, "title": "Dark Road", "category": "dark", "url": "https://images.unsplash.com/photo-1472214103451-9374bd1c798e?w=1920&q=90", "thumb": "https://images.unsplash.com/photo-1472214103451-9374bd1c798e?w=600&q=80", "height": "medium" },
-    { "id": 8, "title": "Black Abstract", "category": "dark", "url": "https://images.unsplash.com/photo-1558591710-4b4a1ae0f04d?w=1920&q=90", "thumb": "https://images.unsplash.com/photo-1558591710-4b4a1ae0f04d?w=600&q=80", "height": "tall" },
-    { "id": 9, "title": "Dark Ocean", "category": "dark", "url": "https://images.unsplash.com/photo-1505118380757-91f5f5632de0?w=1920&q=90", "thumb": "https://images.unsplash.com/photo-1505118380757-91f5f5632de0?w=600&q=80", "height": "short" },
-    { "id": 10, "title": "Night Car", "category": "dark", "url": "https://images.unsplash.com/photo-1503376780353-7e6692767b70?w=1920&q=90", "thumb": "https://images.unsplash.com/photo-1503376780353-7e6692767b70?w=600&q=80", "height": "medium" },
-    { "id": 11, "title": "Dark Leaves", "category": "dark", "url": "https://images.unsplash.com/photo-1483664852095-d6cc04c3fbb7?w=1920&q=90", "thumb": "https://images.unsplash.com/photo-1483664852095-d6cc04c3fbb7?w=600&q=80", "height": "tall" },
-    { "id": 12, "title": "Black Minimal", "category": "dark", "url": "https://images.unsplash.com/photo-1494438639946-1ebd1d20bf85?w=1920&q=90", "thumb": "https://images.unsplash.com/photo-1494438639946-1ebd1d20bf85?w=600&q=80", "height": "short" },
-    { "id": 13, "title": "Dark Portrait", "category": "dark", "url": "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=1920&q=90", "thumb": "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=600&q=80", "height": "medium" },
-    { "id": 14, "title": "Night Building", "category": "dark", "url": "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=1920&q=90", "thumb": "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=600&q=80", "height": "tall" },
-    { "id": 15, "title": "Dark Space", "category": "dark", "url": "https://images.unsplash.com/photo-1541701494587-cb58502866ab?w=1920&q=90", "thumb": "https://images.unsplash.com/photo-1541701494587-cb58502866ab?w=600&q=80", "height": "medium" },
-    { "id": 16, "title": "Black Desk", "category": "dark", "url": "https://images.unsplash.com/photo-1495195129352-aeb325a55b65?w=1920&q=90", "thumb": "https://images.unsplash.com/photo-1495195129352-aeb325a55b65?w=600&q=80", "height": "tall" },
-    { "id": 17, "title": "Dark Jellyfish", "category": "dark", "url": "https://images.unsplash.com/photo-1546026423-cc4642628d2b?w=1920&q=90", "thumb": "https://images.unsplash.com/photo-1546026423-cc4642628d2b?w=600&q=80", "height": "tall" },
-    { "id": 18, "title": "Night Autumn", "category": "dark", "url": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=1920&q=90", "thumb": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=600&q=80", "height": "tall" },
-    { "id": 19, "title": "Starry Night", "category": "nature", "url": "https://images.unsplash.com/photo-1519681393784-d120267933ba?w=1920&q=90", "thumb": "https://images.unsplash.com/photo-1519681393784-d120267933ba?w=600&q=80", "height": "tall" },
-    { "id": 20, "title": "Night Lake", "category": "nature", "url": "https://images.unsplash.com/photo-1470770841072-f978cf4d019e?w=1920&q=90", "thumb": "https://images.unsplash.com/photo-1470770841072-f978cf4d019e?w=600&q=80", "height": "medium" },
-    { "id": 21, "title": "Dark Trees", "category": "nature", "url": "https://images.unsplash.com/photo-1448375240586-882707db888b?w=1920&q=90", "thumb": "https://images.unsplash.com/photo-1448375240586-882707db888b?w=600&q=80", "height": "tall" },
-    { "id": 22, "title": "Moon Light", "category": "nature", "url": "https://images.unsplash.com/photo-1532978379173-523e16f371f2?w=1920&q=90", "thumb": "https://images.unsplash.com/photo-1532978379173-523e16f371f2?w=600&q=80", "height": "short" },
-      //anime
-    { "id": 23, "title": "Anime Night Street", "category": "anime", "url": "https://images.alphacoders.com/132/1326370.jpeg", "thumb": "https://images.alphacoders.com/132/thumb-1326370.jpeg", "height": "tall" },
-    { "id": 24, "title": "Tokyo Night", "category": "anime", "url": "https://images.alphacoders.com/131/1318731.jpeg", "thumb": "https://images.alphacoders.com/131/thumb-1318731.jpeg", "height": "tall" },
-    { "id": 25, "title": "Rainy Anime City", "category": "anime", "url": "https://images.alphacoders.com/130/1308253.jpeg", "thumb": "https://images.alphacoders.com/130/thumb-1308253.jpeg", "height": "medium" },
-    { "id": 26, "title": "Neon Anime City", "category": "anime", "url": "https://images.alphacoders.com/129/1297913.jpeg", "thumb": "https://images.alphacoders.com/129/thumb-1297913.jpeg", "height": "medium" },
-    { "id": 27, "title": "Gojo Satoru", "category": "anime", "url": "https://images.alphacoders.com/128/1288279.jpeg", "thumb": "https://images.alphacoders.com/128/thumb-1288279.jpeg", "height": "tall" },
-    { "id": 28, "title": "Itachi Uchiha", "category": "anime", "url": "https://images.alphacoders.com/127/1273724.jpeg", "thumb": "https://images.alphacoders.com/127/thumb-1273724.jpeg", "height": "short" },
-    { "id": 29, "title": "Levi Ackerman", "category": "anime", "url": "https://images.alphacoders.com/126/1265763.jpeg", "thumb": "https://images.alphacoders.com/126/thumb-1265763.jpeg", "height": "medium" },
-    { "id": 30, "title": "Dark Anime Girl", "category": "anime", "url": "https://images.alphacoders.com/125/1258473.jpeg", "thumb": "https://images.alphacoders.com/125/thumb-1258473.jpeg", "height": "tall" },
-    { "id": 31, "title": "Demon Slayer", "category": "anime", "url": "https://images.alphacoders.com/124/1249192.jpeg", "thumb": "https://images.alphacoders.com/124/thumb-1249192.jpeg", "height": "medium" },
-    { "id": 32, "title": "Dark Fantasy", "category": "anime", "url": "https://images.alphacoders.com/123/1234567.jpeg", "thumb": "https://images.alphacoders.com/123/thumb-1234567.jpeg", "height": "tall" },
-    { "id": 33, "title": "Anime Moon", "category": "anime", "url": "https://images.alphacoders.com/122/1223344.jpeg", "thumb": "https://images.alphacoders.com/122/thumb-1223344.jpeg", "height": "short" },
-    { "id": 34, "title": "Dark Warrior", "category": "anime", "url": "https://images.alphacoders.com/121/1212233.jpeg", "thumb": "https://images.alphacoders.com/121/thumb-1212233.jpeg", "height": "medium" },
-    { "id": 35, "title": "Anime Lantern", "category": "anime", "url": "https://images.unsplash.com/photo-1528360983277-13d401cdc186?w=1920&q=90", "thumb": "https://images.unsplash.com/photo-1528360983277-13d401cdc186?w=600&q=80", "height": "tall" },
-    { "id": 36, "title": "Night Japan", "category": "anime", "url": "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=1920&q=90", "thumb": "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=600&q=80", "height": "tall" },
-    { "id": 37, "title": "Neon Tokyo", "category": "anime", "url": "https://images.unsplash.com/photo-1503899036084-c55cdd92da26?w=1920&q=90", "thumb": "https://images.unsplash.com/photo-1503899036084-c55cdd92da26?w=600&q=80", "height": "medium" },
-    { "id": 38, "title": "Cherry Blossom Night", "category": "anime", "url": "https://images.unsplash.com/photo-1522383225653-ed111181a951?w=1920&q=90", "thumb": "https://images.unsplash.com/photo-1522383225653-ed111181a951?w=600&q=80", "height": "tall" },
-    { "id": 39, "title": "Dark Aesthetic", "category": "anime", "url": "https://images.unsplash.com/photo-1515630278258-407f66498911?w=1920&q=90", "thumb": "https://images.unsplash.com/photo-1515630278258-407f66498911?w=600&q=80", "height": "tall" },
+            { id: 1, title: "Jellyfish Glow", category: "dark", url: "https://images.unsplash.com/photo-1546026423-cc4642628d2b?w=1920&q=90", thumb: "https://images.unsplash.com/photo-1546026423-cc4642628d2b?w=600&q=80", height: "tall" },
+            { id: 2, title: "Autumn Forest", category: "nature", url: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=1920&q=90", thumb: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=600&q=80", height: "tall" },
+            { id: 3, title: "Swan Lake", category: "nature", url: "https://images.unsplash.com/photo-1472214103451-9374bd1c798e?w=1920&q=90", thumb: "https://images.unsplash.com/photo-1472214103451-9374bd1c798e?w=600&q=80", height: "medium" },
+            { id: 4, title: "Portrait Art", category: "dark", url: "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=1920&q=90", thumb: "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=600&q=80", height: "medium" },
+            { id: 5, title: "Golden Hour", category: "nature", url: "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1920&q=90", thumb: "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=600&q=80", height: "short" },
+            { id: 6, title: "Frost Leaves", category: "nature", url: "https://images.unsplash.com/photo-1483664852095-d6cc04c3fbb7?w=1920&q=90", thumb: "https://images.unsplash.com/photo-1483664852095-d6cc04c3fbb7?w=600&q=80", height: "tall" },
+            { id: 7, title: "Cyber City", category: "dark", url: "https://images.unsplash.com/photo-1519608487953-e999c86e7455?w=1920&q=90", thumb: "https://images.unsplash.com/photo-1519608487953-e999c86e7455?w=600&q=80", height: "medium" },
+            { id: 8, title: "Mountain Lake", category: "nature", url: "https://images.unsplash.com/photo-1439853949127-fa647821eba0?w=1920&q=90", thumb: "https://images.unsplash.com/photo-1439853949127-fa647821eba0?w=600&q=80", height: "short" },
+            { id: 9, title: "Sports Car", category: "cars", url: "https://images.unsplash.com/photo-1503376780353-7e6692767b70?w=1920&q=90", thumb: "https://images.unsplash.com/photo-1503376780353-7e6692767b70?w=600&q=80", height: "medium" },
+            { id: 10, title: "Abstract Waves", category: "abstract", url: "https://images.unsplash.com/photo-1550684376-efcbd6e3f031?w=1920&q=90", thumb: "https://images.unsplash.com/photo-1550684376-efcbd6e3f031?w=600&q=80", height: "tall" },
+            { id: 11, title: "Minimal Lines", category: "minimal", url: "https://images.unsplash.com/photo-1494438639946-1ebd1d20bf85?w=1920&q=90", thumb: "https://images.unsplash.com/photo-1494438639946-1ebd1d20bf85?w=600&q=80", height: "short" },
+            { id: 12, title: "Neon Night", category: "dark", url: "https://images.unsplash.com/photo-1515630278258-407f66498911?w=1920&q=90", thumb: "https://images.unsplash.com/photo-1515630278258-407f66498911?w=600&q=80", height: "tall" },
+            { id: 13, title: "Cherry Blossom", category: "anime", url: "https://images.unsplash.com/photo-1522383225653-ed111181a951?w=1920&q=90", thumb: "https://images.unsplash.com/photo-1522383225653-ed111181a951?w=600&q=80", height: "medium" },
+            { id: 14, title: "Forest Path", category: "nature", url: "https://images.unsplash.com/photo-1448375240586-882707db888b?w=1920&q=90", thumb: "https://images.unsplash.com/photo-1448375240586-882707db888b?w=600&q=80", height: "tall" },
+            { id: 15, title: "Supercar", category: "cars", url: "https://images.unsplash.com/photo-1544636331-e26879cd4d9b?w=1920&q=90", thumb: "https://images.unsplash.com/photo-1544636331-e26879cd4d9b?w=600&q=80", height: "short" },
+            { id: 16, title: "Geometric Art", category: "abstract", url: "https://images.unsplash.com/photo-1558591710-4b4a1ae0f04d?w=1920&q=90", thumb: "https://images.unsplash.com/photo-1558591710-4b4a1ae0f04d?w=600&q=80", height: "medium" },
+            { id: 17, title: "White Space", category: "minimal", url: "https://images.unsplash.com/photo-1495195129352-aeb325a55b65?w=1920&q=90", thumb: "https://images.unsplash.com/photo-1495195129352-aeb325a55b65?w=600&q=80", height: "tall" },
+            { id: 18, title: "Dark Forest", category: "dark", url: "https://images.unsplash.com/photo-1511497584788-876760111969?w=1920&q=90", thumb: "https://images.unsplash.com/photo-1511497584788-876760111969?w=600&q=80", height: "medium" },
+        ];
 
-     ];
+        // Developer Profiles Data
+        const developerProfiles = {
+            gavesh: {
+                name: "Gavesh Vimanshana",
+                role: "Lead Developer & Designer",
+                avatar: "GV",
+                details: [
+                    { icon: "fas fa-briefcase", label: "Position", value: "Lead Developer & UI Designer" },
+                    { icon: "fas fa-map-marker-alt", label: "Location", value: "Sri Lanka" },
+                    { icon: "fas fa-project-diagram", label: "Project Role", value: "Architecture & Frontend Design" },
+                    { icon: "fas fa-star", label: "Specialty", value: "Full-Stack Web Development" },
+                ],
+                skills: ["HTML", "CSS", "JavaScript", "UI/UX", "Responsive Design", "Web Apps"]
+            },
+            kaveesha: {
+                name: "P Kaveesha",
+                role: "Co-Developer & UI/UX",
+                avatar: "PK",
+                details: [
+                    { icon: "fas fa-briefcase", label: "Position", value: "Co-Developer & UX Specialist" },
+                    { icon: "fas fa-map-marker-alt", label: "Location", value: "Sri Lanka" },
+                    { icon: "fas fa-project-diagram", label: "Project Role", value: "UI/UX & Frontend Development" },
+                    { icon: "fas fa-star", label: "Specialty", value: "User Interface Design" },
+                ],
+                skills: ["UI Design", "UX Research", "CSS", "JavaScript", "Figma", "Animations"]
+            }
+        };
 
         let currentCategory = 'all';
         let currentWallpaperIndex = 0;
@@ -1037,82 +990,55 @@
             "Free downloads for all devices...",
             "Your story starts here..."
         ];
-        let textIndex = 0;
-        let charIndex = 0;
-        let isDeleting = false;
+        let textIndex = 0, charIndex = 0, isDeleting = false;
         const typingElement = document.getElementById('typingText');
 
         function typeEffect() {
             const currentText = typingTexts[textIndex];
-
-            if (isDeleting) {
-                typingElement.textContent = currentText.substring(0, charIndex - 1);
-                charIndex--;
-            } else {
-                typingElement.textContent = currentText.substring(0, charIndex + 1);
-                charIndex++;
-            }
-
+            typingElement.textContent = isDeleting
+                ? currentText.substring(0, charIndex - 1)
+                : currentText.substring(0, charIndex + 1);
+            isDeleting ? charIndex-- : charIndex++;
             let typeSpeed = isDeleting ? 50 : 100;
-
-            if (!isDeleting && charIndex === currentText.length) {
-                typeSpeed = 2000;
-                isDeleting = true;
-            } else if (isDeleting && charIndex === 0) {
-                isDeleting = false;
-                textIndex = (textIndex + 1) % typingTexts.length;
-                typeSpeed = 500;
-            }
-
+            if (!isDeleting && charIndex === currentText.length) { typeSpeed = 2000; isDeleting = true; }
+            else if (isDeleting && charIndex === 0) { isDeleting = false; textIndex = (textIndex + 1) % typingTexts.length; typeSpeed = 500; }
             setTimeout(typeEffect, typeSpeed);
         }
 
-        // Snow Effect
+        // Snow
         function createSnow() {
             const container = document.getElementById('snowContainer');
-            const snowflakeCount = 40;
-
-            for (let i = 0; i < snowflakeCount; i++) {
-                const snowflake = document.createElement('div');
-                snowflake.className = 'snowflake';
-                snowflake.innerHTML = '&#10052;';
-                snowflake.style.left = Math.random() * 100 + '%';
-                snowflake.style.animationDuration = Math.random() * 5 + 5 + 's';
-                snowflake.style.animationDelay = Math.random() * 5 + 's';
-                snowflake.style.fontSize = Math.random() * 8 + 8 + 'px';
-                snowflake.style.opacity = Math.random() * 0.5 + 0.2;
-                container.appendChild(snowflake);
+            for (let i = 0; i < 40; i++) {
+                const flake = document.createElement('div');
+                flake.className = 'snowflake';
+                flake.innerHTML = '&#10052;';
+                flake.style.left = Math.random() * 100 + '%';
+                flake.style.animationDuration = Math.random() * 5 + 5 + 's';
+                flake.style.animationDelay = Math.random() * 5 + 's';
+                flake.style.fontSize = Math.random() * 8 + 8 + 'px';
+                flake.style.opacity = Math.random() * 0.5 + 0.2;
+                container.appendChild(flake);
             }
         }
 
-        // Render Wallpapers - 2 Column Masonry
+        // Render Wallpapers
         function renderWallpapers(category = 'all') {
             const grid = document.getElementById('wallpaperGrid');
             grid.innerHTML = '';
-
-            filteredWallpapers = category === 'all' 
-                ? [...wallpapers] 
-                : wallpapers.filter(w => w.category === category);
+            filteredWallpapers = category === 'all' ? [...wallpapers] : wallpapers.filter(w => w.category === category);
 
             filteredWallpapers.forEach((wallpaper, index) => {
                 const card = document.createElement('div');
                 card.className = 'wallpaper-card';
-                card.style.animationDelay = index * 0.08 + 's';
-
-                // Different heights for masonry effect
                 let imgHeight = '250px';
                 if (wallpaper.height === 'tall') imgHeight = '320px';
                 if (wallpaper.height === 'short') imgHeight = '200px';
-                if (wallpaper.height === 'medium') imgHeight = '260px';
-
                 card.innerHTML = `
-                    <img src="${wallpaper.thumb}" alt="${wallpaper.title}" loading="lazy" 
-                         style="height: ${imgHeight};" 
-                         onerror="this.src='${wallpaper.url}'">
+                    <img src="${wallpaper.thumb}" alt="${wallpaper.title}" loading="lazy" style="height:${imgHeight};" onerror="this.src='${wallpaper.url}'">
                     <div class="wallpaper-overlay">
                         <span class="wallpaper-category">${wallpaper.category}</span>
                         <div class="wallpaper-title">${wallpaper.title}</div>
-                        <button class="download-btn" onclick="event.stopPropagation(); downloadWallpaper(${wallpaper.id})">
+                        <button class="download-btn" onclick="event.stopPropagation(); directDownload(${wallpaper.id})">
                             <i class="fas fa-download"></i> Download
                         </button>
                     </div>
@@ -1122,7 +1048,7 @@
             });
         }
 
-        // Filter Function
+        // Filter
         function filterWallpapers(category) {
             currentCategory = category;
             document.querySelectorAll('.filter-btn').forEach(btn => {
@@ -1131,36 +1057,43 @@
             renderWallpapers(category);
         }
 
-        // Download Function
-        async function downloadWallpaper(id) {
+        // Direct Download - using blob fetch to force save dialog
+        async function directDownload(id) {
             const wallpaper = wallpapers.find(w => w.id === id);
             if (!wallpaper) return;
-
-            showToast('Starting download: ' + wallpaper.title);
+            showToast('⬇️ Downloading: ' + wallpaper.title);
 
             try {
+                const response = await fetch(wallpaper.url);
+                const blob = await response.blob();
+                const blobUrl = URL.createObjectURL(blob);
+                const a = document.createElement('a');
+                a.href = blobUrl;
+                a.download = 'WallpaperStory_' + wallpaper.title.replace(/\s+/g, '_') + '.jpg';
+                document.body.appendChild(a);
+                a.click();
+                document.body.removeChild(a);
+                setTimeout(() => URL.revokeObjectURL(blobUrl), 5000);
+                showToast('✅ Downloaded: ' + wallpaper.title);
+            } catch (err) {
+                // Fallback
                 const a = document.createElement('a');
                 a.href = wallpaper.url;
-                a.download = 'WallpaperStory_' + wallpaper.title.replace(/\s+/g, '_') + '_' + wallpaper.id + '.jpg';
+                a.download = 'WallpaperStory_' + wallpaper.title.replace(/\s+/g, '_') + '.jpg';
                 a.target = '_blank';
                 document.body.appendChild(a);
                 a.click();
                 document.body.removeChild(a);
-
-                showToast('Downloaded: ' + wallpaper.title);
-            } catch (error) {
-                window.open(wallpaper.url, '_blank');
-                showToast('Opening: ' + wallpaper.title);
+                showToast('✅ Saving: ' + wallpaper.title);
             }
         }
 
-        // Gallery Functions
+        // Gallery
         const galleryModal = document.getElementById('galleryModal');
         const galleryImage = document.getElementById('galleryImage');
         const galleryTitle = document.getElementById('galleryTitle');
         const galleryCategory = document.getElementById('galleryCategory');
         const galleryCounter = document.getElementById('galleryCounter');
-        const galleryDownloadBtn = document.getElementById('galleryDownloadBtn');
 
         function openGallery(index) {
             currentWallpaperIndex = index;
@@ -1181,65 +1114,144 @@
             galleryCategory.textContent = wallpaper.category.charAt(0).toUpperCase() + wallpaper.category.slice(1);
             galleryCounter.textContent = (currentWallpaperIndex + 1) + ' / ' + filteredWallpapers.length;
 
-            galleryDownloadBtn.onclick = function() {
-                downloadWallpaper(wallpaper.id);
+            // Reset download button
+            const btn = document.getElementById('galleryDownloadBtn');
+            const progress = document.getElementById('btnProgress');
+            const dlText = document.getElementById('dlBtnText');
+            const dlIcon = document.getElementById('dlIcon');
+            btn.classList.remove('downloading');
+            progress.style.width = '0%';
+            dlText.textContent = 'Download Wallpaper';
+            dlIcon.className = 'fas fa-download';
+
+            // Set View button link
+            const viewBtn = document.getElementById('galleryViewBtn');
+            viewBtn.href = wallpaper.url;
+
+            btn.onclick = async function() {
+                if (btn.classList.contains('downloading')) return;
+                btn.classList.add('downloading');
+                dlText.textContent = 'Downloading...';
+                dlIcon.className = 'fas fa-spinner fa-spin';
+                progress.style.width = '60%';
+
+                try {
+                    const response = await fetch(wallpaper.url);
+                    const blob = await response.blob();
+                    progress.style.width = '90%';
+                    const blobUrl = URL.createObjectURL(blob);
+                    const a = document.createElement('a');
+                    a.href = blobUrl;
+                    a.download = 'WallpaperStory_' + wallpaper.title.replace(/\s+/g, '_') + '.jpg';
+                    document.body.appendChild(a);
+                    a.click();
+                    document.body.removeChild(a);
+                    setTimeout(() => URL.revokeObjectURL(blobUrl), 5000);
+                    progress.style.width = '100%';
+                    dlText.textContent = 'Downloaded!';
+                    dlIcon.className = 'fas fa-check';
+                    showToast('✅ Downloaded: ' + wallpaper.title);
+                    setTimeout(() => {
+                        btn.classList.remove('downloading');
+                        progress.style.width = '0%';
+                        dlText.textContent = 'Download Wallpaper';
+                        dlIcon.className = 'fas fa-download';
+                    }, 3000);
+                } catch (err) {
+                    // Fallback
+                    const a = document.createElement('a');
+                    a.href = wallpaper.url;
+                    a.download = 'WallpaperStory_' + wallpaper.title.replace(/\s+/g, '_') + '.jpg';
+                    a.target = '_blank';
+                    document.body.appendChild(a);
+                    a.click();
+                    document.body.removeChild(a);
+                    dlText.textContent = 'Saved!';
+                    dlIcon.className = 'fas fa-check';
+                    showToast('✅ Saving: ' + wallpaper.title);
+                    setTimeout(() => {
+                        btn.classList.remove('downloading');
+                        progress.style.width = '0%';
+                        dlText.textContent = 'Download Wallpaper';
+                        dlIcon.className = 'fas fa-download';
+                    }, 3000);
+                }
             };
         }
 
-        function nextWallpaper() {
-            currentWallpaperIndex = (currentWallpaperIndex + 1) % filteredWallpapers.length;
-            updateGallery();
-        }
+        function nextWallpaper() { currentWallpaperIndex = (currentWallpaperIndex + 1) % filteredWallpapers.length; updateGallery(); }
+        function prevWallpaper() { currentWallpaperIndex = (currentWallpaperIndex - 1 + filteredWallpapers.length) % filteredWallpapers.length; updateGallery(); }
 
-        function prevWallpaper() {
-            currentWallpaperIndex = (currentWallpaperIndex - 1 + filteredWallpapers.length) % filteredWallpapers.length;
-            updateGallery();
-        }
-
-        // Gallery Event Listeners
         document.getElementById('galleryClose').addEventListener('click', closeGallery);
         document.getElementById('galleryNext').addEventListener('click', nextWallpaper);
         document.getElementById('galleryPrev').addEventListener('click', prevWallpaper);
-
-        galleryModal.addEventListener('click', (e) => {
-            if (e.target === galleryModal) closeGallery();
-        });
-
-        document.addEventListener('keydown', (e) => {
+        galleryModal.addEventListener('click', e => { if (e.target === galleryModal) closeGallery(); });
+        document.addEventListener('keydown', e => {
             if (!galleryModal.classList.contains('active')) return;
             if (e.key === 'Escape') closeGallery();
             if (e.key === 'ArrowRight') nextWallpaper();
             if (e.key === 'ArrowLeft') prevWallpaper();
         });
 
-        // Toast Function
-        function showToast(message) {
-            const toast = document.getElementById('toast');
-            const toastMessage = document.getElementById('toastMessage');
-            toastMessage.textContent = message;
-            toast.classList.add('show');
-            setTimeout(() => {
-                toast.classList.remove('show');
-            }, 3000);
+        // ===== DEVELOPER PROFILE MODAL =====
+        const devModal = document.getElementById('devModal');
+
+        function showDevProfile(devKey) {
+            const dev = developerProfiles[devKey];
+            if (!dev) return;
+
+            document.getElementById('devAvatar').textContent = dev.avatar;
+            document.getElementById('devName').textContent = dev.name;
+            document.getElementById('devRole').textContent = dev.role;
+
+            let bodyHTML = '';
+            dev.details.forEach(d => {
+                bodyHTML += `
+                    <div class="dev-info-row">
+                        <div class="dev-info-icon"><i class="${d.icon}"></i></div>
+                        <div>
+                            <div class="dev-info-label">${d.label}</div>
+                            <div class="dev-info-value">${d.value}</div>
+                        </div>
+                    </div>
+                `;
+            });
+
+            bodyHTML += `<div class="dev-skills">`;
+            dev.skills.forEach(skill => {
+                bodyHTML += `<span class="dev-skill-tag">${skill}</span>`;
+            });
+            bodyHTML += `</div>`;
+
+            document.getElementById('devModalBody').innerHTML = bodyHTML;
+            devModal.classList.add('active');
+            document.body.style.overflow = 'hidden';
         }
 
-        // Sidebar Toggle
+        function closeDevModal() {
+            devModal.classList.remove('active');
+            document.body.style.overflow = '';
+        }
+
+        document.getElementById('devModalClose').addEventListener('click', closeDevModal);
+        devModal.addEventListener('click', e => { if (e.target === devModal) closeDevModal(); });
+
+        // Toast
+        function showToast(message) {
+            const toast = document.getElementById('toast');
+            document.getElementById('toastMessage').textContent = message;
+            toast.classList.add('show');
+            setTimeout(() => toast.classList.remove('show'), 3000);
+        }
+
+        // Sidebar
         const sidebar = document.getElementById('sidebar');
         const sidebarOverlay = document.getElementById('sidebarOverlay');
         const menuBtn = document.getElementById('menuBtn');
         const closeSidebarBtn = document.getElementById('closeSidebar');
 
-        function openSidebar() {
-            sidebar.classList.add('active');
-            sidebarOverlay.classList.add('active');
-            document.body.style.overflow = 'hidden';
-        }
-
-        function closeSidebar() {
-            sidebar.classList.remove('active');
-            sidebarOverlay.classList.remove('active');
-            document.body.style.overflow = '';
-        }
+        function openSidebar() { sidebar.classList.add('active'); sidebarOverlay.classList.add('active'); document.body.style.overflow = 'hidden'; }
+        function closeSidebar() { sidebar.classList.remove('active'); sidebarOverlay.classList.remove('active'); document.body.style.overflow = ''; }
 
         menuBtn.addEventListener('click', openSidebar);
         closeSidebarBtn.addEventListener('click', closeSidebar);
@@ -1247,171 +1259,10 @@
 
         // Filter Buttons
         document.querySelectorAll('.filter-btn').forEach(btn => {
-            btn.addEventListener('click', () => {
-                filterWallpapers(btn.dataset.category);
-            });
+            btn.addEventListener('click', () => filterWallpapers(btn.dataset.category));
         });
 
-        // Info Modal Content
-        const infoContent = {
-            terms: {
-                title: '<i class="fas fa-file-contract"></i> Terms of Service',
-                body: `
-                    <h3><i class="fas fa-check-circle"></i> Acceptance of Terms</h3>
-                    <p>By accessing and using Wallpaper Story, you agree to be bound by these Terms of Service. If you do not agree with any part of these terms, please do not use our website.</p>
-
-                    <h3><i class="fas fa-image"></i> Wallpaper Usage</h3>
-                    <ul>
-                        <li>All wallpapers are free for personal use only</li>
-                        <li>You may use wallpapers on your personal devices</li>
-                        <li>Commercial use requires explicit permission</li>
-                        <li>Do not redistribute wallpapers without credit</li>
-                        <li>Do not sell or monetize downloaded wallpapers</li>
-                    </ul>
-
-                    <h3><i class="fas fa-copyright"></i> Copyright</h3>
-                    <p>Wallpapers are sourced from Unsplash and other free sources. All images remain the property of their respective photographers. We do not claim ownership of any wallpapers.</p>
-
-                    <h3><i class="fas fa-user-shield"></i> User Conduct</h3>
-                    <ul>
-                        <li>Do not use our service for illegal purposes</li>
-                        <li>Do not attempt to hack or disrupt the website</li>
-                        <li>Respect the work of photographers and artists</li>
-                        <li>Report any inappropriate content</li>
-                    </ul>
-
-                    <h3><i class="fas fa-sync-alt"></i> Changes to Terms</h3>
-                    <p>We reserve the right to modify these terms at any time. Continued use of the website after changes constitutes acceptance of the new terms.</p>
-
-                    <h3><i class="fas fa-envelope"></i> Contact</h3>
-                    <p>For questions about these terms, contact us at <span class="highlight">contact@wallpaperstory.com</span></p>
-                `
-            },
-            privacy: {
-                title: '<i class="fas fa-shield-alt"></i> Privacy Policy',
-                body: `
-                    <h3><i class="fas fa-eye"></i> Information We Collect</h3>
-                    <p>Wallpaper Story is designed with privacy in mind. We collect minimal information:</p>
-                    <ul>
-                        <li>We do NOT collect personal identification information</li>
-                        <li>We do NOT use tracking cookies</li>
-                        <li>We do NOT store your download history</li>
-                        <li>We do NOT share data with third parties</li>
-                    </ul>
-
-                    <h3><i class="fas fa-server"></i> Server Logs</h3>
-                    <p>Like most websites, our server automatically records basic information such as your IP address, browser type, and access times. This data is used solely for technical maintenance and security purposes.</p>
-
-                    <h3><i class="fas fa-cookie-bite"></i> Cookies</h3>
-                    <p>We do not use tracking cookies. Any cookies used are strictly for essential website functionality (such as remembering your category filter preference).</p>
-
-                    <h3><i class="fas fa-download"></i> Downloads</h3>
-                    <p>All wallpaper downloads are anonymous. We do not track what you download or how many times you download. Your download activity is completely private.</p>
-
-                    <h3><i class="fas fa-shield-alt"></i> Security</h3>
-                    <p>We implement reasonable security measures to protect our website. However, no internet transmission is 100% secure. Use our service at your own discretion.</p>
-
-                    <h3><i class="fas fa-child"></i> Children's Privacy</h3>
-                    <p>Our service is suitable for all ages. We do not knowingly collect information from children under 13.</p>
-
-                    <h3><i class="fas fa-envelope"></i> Contact Us</h3>
-                    <p>If you have privacy concerns, email us at <span class="highlight">privacy@wallpaperstory.com</span></p>
-                `
-            },
-            about: {
-                title: '<i class="fas fa-info-circle"></i> About Us',
-                body: `
-                    <h3><i class="fas fa-heart"></i> Our Story</h3>
-                    <p>Wallpaper Story was created with a simple mission: to provide beautiful, high-quality wallpapers for everyone, completely free. We believe your device should look as amazing as you are!</p>
-
-                    <h3><i class="fas fa-bullseye"></i> Our Mission</h3>
-                    <ul>
-                        <li>Curate the best wallpapers from talented photographers</li>
-                        <li>Provide a seamless, ad-free browsing experience</li>
-                        <li>Support artists by giving proper credit</li>
-                        <li>Keep the service free for everyone</li>
-                    </ul>
-
-                    <h3><i class="fas fa-users"></i> Our Team</h3>
-                    <p><span class="highlight">Gavesh Vimanshana</span> - Lead Developer & Designer. Passionate about creating beautiful web experiences.</p>
-                    <p><span class="highlight">P Kaveesha</span> - Co-Developer & UI/UX Specialist. Dedicated to user-friendly design.</p>
-
-                    <h3><i class="fas fa-images"></i> Our Collection</h3>
-                    <p>We feature wallpapers across multiple categories including Nature, Anime, Cars, Abstract, Dark, and Minimal. Each wallpaper is carefully selected for quality and visual appeal.</p>
-
-                    <h3><i class="fas fa-handshake"></i> Credits</h3>
-                    <p>All wallpapers are sourced from Unsplash and other free stock photo platforms. We are grateful to the talented photographers who make their work available.</p>
-
-                    <h3><i class="fas fa-envelope"></i> Get in Touch</h3>
-                    <p>Have suggestions or feedback? Email us at <span class="highlight">hello@wallpaperstory.com</span></p>
-                `
-            },
-            contact: {
-                title: '<i class="fas fa-envelope"></i> Contact Us',
-                body: `
-                    <h3><i class="fas fa-paper-plane"></i> Get in Touch</h3>
-                    <p>We would love to hear from you! Whether you have feedback, suggestions, or just want to say hello, feel free to reach out.</p>
-
-                    <h3><i class="fas fa-envelope"></i> Email</h3>
-                    <p>General Inquiries: <span class="highlight">hello@wallpaperstory.com</span></p>
-                    <p>Support: <span class="highlight">support@wallpaperstory.com</span></p>
-                    <p>Privacy Concerns: <span class="highlight">privacy@wallpaperstory.com</span></p>
-
-                    <h3><i class="fas fa-code"></i> Developers</h3>
-                    <p><span class="highlight">Gavesh Vimanshana</span> - Lead Developer</p>
-                    <p><span class="highlight">P Kaveesha</span> - Co-Developer</p>
-
-                    <h3><i class="fas fa-clock"></i> Response Time</h3>
-                    <p>We typically respond within 24-48 hours. Thank you for your patience!</p>
-
-                    <h3><i class="fas fa-map-marker-alt"></i> Location</h3>
-                    <p>Sri Lanka</p>
-                `
-            }
-        };
-
-        // Info Modal Functions
-        const infoModal = document.getElementById('infoModal');
-        const infoTitle = document.getElementById('infoTitle');
-        const infoBody = document.getElementById('infoBody');
-
-        function showInfoModal(type) {
-            const content = infoContent[type];
-            if (!content) return;
-
-            infoTitle.innerHTML = content.title;
-            infoBody.innerHTML = content.body;
-            infoModal.classList.add('active');
-            document.body.style.overflow = 'hidden';
-        }
-
-        function closeInfoModal() {
-            infoModal.classList.remove('active');
-            document.body.style.overflow = '';
-        }
-
-        document.getElementById('infoClose').addEventListener('click', closeInfoModal);
-        infoModal.addEventListener('click', (e) => {
-            if (e.target === infoModal) closeInfoModal();
-        });
-
-        function showTerms() {
-            showInfoModal('terms');
-        }
-
-        function showPrivacy() {
-            showInfoModal('privacy');
-        }
-
-        function showAbout() {
-            showInfoModal('about');
-        }
-
-        function showContact() {
-            showInfoModal('contact');
-        }
-
-        // Initialize
+        // Init
         document.addEventListener('DOMContentLoaded', () => {
             createSnow();
             typeEffect();
@@ -1419,4 +1270,4 @@
         });
     </script>
 </body>
-                                                                       </html>
+    </html>
